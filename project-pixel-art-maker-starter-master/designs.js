@@ -36,8 +36,9 @@ function makeGrid() {
       gridRow.appendChild(gridCell);
 
       // Fills cell with selected color when mouse is pressed ('mousedown', unlike 'click', doesn't also require release of mouse button)
-      gridCell.addEventListener('mousedown', function(e) {
-        gridCell.style.backgroundColor = colorInput;
+      gridCell.addEventListener('mousedown', function() {
+        const cellColor = document.querySelector('#colorPicker').value;
+        gridCell.style.backgroundColor = cellColor;
       })
      }
   }
